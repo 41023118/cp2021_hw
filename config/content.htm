@@ -5,6 +5,14 @@
 <p>網站倉儲: <a href="https://github.com/41023118/cp2021_hw">https://github.com/41023118/cp2021_hw</a></p>
 <p>網站連結: <a href="https://41023118.github.io/cp2021_hw/content/index.html">https://41023118.github.io/cp2021_hw/content/index.html</a></p>
 <p>其他與個人或作業相關資料說明或介紹</p>
+<h2>GitExtensions</h2>
+<p><a href="https://github.com/mdecourse/cad2021/files/7517136/GitExtensions_hybrid.zip">下載尚未個人化設定的 GitExtensions</a></p>
+<p>利用 GitExtensions 輸入提交訊息時, 若出現字串 highlight 表示提交字串可能不會被 Github 接受, 導致<span> </span><a href="https://github.com/mdecourse/cad2021_hw/commit/fafa93e9925892354f02996006a965bbd2b4a56e">Github Pages 轉檔錯誤</a>, 網頁將無法正常連線. 修正錯誤後, 以正確的提交字串 push, 可以得到正確的<a href="https://github.com/mdecourse/cad2021_hw/commit/09d98e1dfc4a0cfda2edae530efb5e08ac1f47ba">轉檔結果</a>.</p>
+<p>GitExtensions 設定:</p>
+<p><img alt="" height="486" src="https://mde.tw/cad2021_hw/images/GitExtensions_Paths_setup.png" width="600"/></p>
+<p>GitExtensions Git config setup:</p>
+<p><img alt="" height="486" src="https://mde.tw/cad2021_hw/images/GitExtensions_Git_config.png" width="600"/></p>
+<p>以下將請已經完成 GitExtensions 與 SSH 結合使用的學員製作"GitExtensions 導引" Wink, 說明詳細的設定流程.</p>
 <h1>EXAM</h1>
 <h2>W13</h2>
 <!-- 導入 brython 程式庫 -->
@@ -375,7 +383,7 @@ def run():
     try:
         url = doc.query["src"]
     except:
-        url = "https://gist.githubusercontent.com/41023118/a0f7ed9d28550a069446d4220d2f1c79/raw/ba6bfcd28f54994d9ecf92fba99a4c2172fa3c00/%25E8%2587%25AA%25E5%258B%2595%25E8%25B2%25AA%25E5%2590%2583%25E8%259B%2587"
+        url = "https://gist.githubusercontent.com/41023118/a0f7ed9d28550a069446d4220d2f1c79/raw/5adc167fe72cb054ab5d74305ad033b70d49a6e0/%25E8%2587%25AA%25E5%258B%2595%25E8%25B2%25AA%25E5%2590%2583%25E8%259B%2587"
     prog = open(url).read()
 
     # 將程式載入編輯區
@@ -409,7 +417,9 @@ run()
 <!-- 程式執行 ouput 區 -->
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console"></textarea></div>
 <!-- Brython 程式執行的結果, 都以 brython_div 作為切入位置 -->
-<div id="brython_div"></div><h1>Final Project</h1>
+<div id="brython_div"></div>
+<h2>手動貪吃蛇</h2>
+<h1>Final Project</h1>
 <p>Final Project 佔學期成績 30%</p>
 <p><span style="background-color: #ffff99;">Final Project 必須在 2022.01.05 22:00 之前完成</span>.</p>
 <p><a href="https://github.com/mdecourse/cp2021/discussions/11">Final Project 具體項目成果回報區</a>將於 2021.11.09 開啟, 於 <span style="background-color: #ff99cc;">2022.01.05 22:00 關閉</span></p>
