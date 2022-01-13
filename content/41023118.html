@@ -128,7 +128,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li><a href='41023118.html'>41023118</a><li><a href='GitExtensions.html'>GitExtensions</a></li></ul><li class='has-children'><a href='EXAM.html'>EXAM</a><ul class='dropdown'><li><a href='W13.html'>W13</a><li><a href='Final1.html'>Final1</a></li></ul><li class='has-children'><a href='HW1.html'>HW1</a><ul class='dropdown'><li><a href='HW1-1.html'>HW1-1</a><li><a href='HW1-2.html'>HW1-2</a></li></ul><li class='has-children'><a href='HW2.html'>HW2</a><ul class='dropdown'><li><a href='run.html'>run</a></li></ul><li class='has-children'><a href='HW3.html'>HW3</a><ul class='dropdown'><li><a href='自動貪吃蛇.html'>自動貪吃蛇</a><li><a href='手動貪吃蛇.html'>手動貪吃蛇</a></li></ul><li><a href='Final Project.html'>Final Project</a></li>
+                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li><a href='41023118.html'>41023118</a><li><a href='GitExtensions.html'>GitExtensions</a></li></ul><li class='has-children'><a href='EXAM.html'>EXAM</a><ul class='dropdown'><li><a href='W13.html'>W13</a><li><a href='Final1.html'>Final1</a><li><a href='final2.html'>final2</a></li></ul><li class='has-children'><a href='HW1.html'>HW1</a><ul class='dropdown'><li><a href='HW1-1.html'>HW1-1</a><li><a href='HW1-2.html'>HW1-2</a></li></ul><li class='has-children'><a href='HW2.html'>HW2</a><ul class='dropdown'><li><a href='run.html'>run</a></li></ul><li class='has-children'><a href='HW3.html'>HW3</a><ul class='dropdown'><li><a href='自動貪吃蛇.html'>自動貪吃蛇</a><li><a href='手動貪吃蛇.html'>手動貪吃蛇</a></li></ul><li><a href='Final Project.html'>Final Project</a></li>
                       </ul>
                 </nav>
               </div>
@@ -241,6 +241,32 @@ def w13_inp(ev):
 # id 為 "w13" 的按鈕點按時, 執行 w13_inp 方法
 doc["w13"].bind('click', w13_inp)
 
+final1_qwe_url = "https://gist.githubusercontent.com/41023118/d2fe8f3fd445b69af08ff0781673a246/raw/8b55554d772d99dc63718d21d3da645c79228757/final1"
+ # 從 gist 取得程式碼
+final1_wq = open(final1_qwe_url).read()
+
+def final1_inp(ev):
+     Ace.editor.setValue(final1_wq)
+     Ace.editor.scrollToRow(0)
+     Ace.editor.gotoLine(0)
+     #Ace.run()
+
+# id 為 "final1" 的按鈕點按時, 執行 final1_inp 方法
+doc["final1"].bind('click', final1_inp)
+
+final2_qwe_url = "https://gist.githubusercontent.com/41023118/1a1b0fad8fdc05a257e3c4c46fd61dde/raw/30c64c73c8dcb2608dc3655a30d60b0c4a3d391c/final2"
+ # 從 gist 取得程式碼
+final2_wq = open(final2_qwe_url).read()
+
+def final2_inp(ev):
+     Ace.editor.setValue(final2_wq)
+     Ace.editor.scrollToRow(0)
+     Ace.editor.gotoLine(0)
+     #Ace.run()
+
+# id 為 "final2" 的按鈕點按時, 執行 final2_inp 方法
+doc["final2"].bind('click', final2_inp)
+
 # 執行程式, 顯示輸出結果與清除輸出結果及對應按鈕綁定
 doc['kw_run'].bind('click', Ace.run)
 doc['kw_show_console'].bind('click', Ace.show_console)
@@ -257,13 +283,20 @@ run()
 <p></p>
 <!-- 執行與清除按鈕開始 -->
 <p><button id="kw_run">Run</button> <button id="kw_show_console">Output</button> <button id="kw_clear_console">清除輸出區</button><button id="clear_bd">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
-<p><button id="hw1-1">hw1-1</button> <button id="hw1-2">hw1-2</button> <button id="w13">w13</button></p>
-<!-- 執行與清除按鈕結束 -->
+<p><button id="hw1-1">hw1-1</button> <button id="hw1-2">hw1-2</button> <button id="w13">w13</button> <button id="final1">final1</button> <button id="final2">final2</button></p>
 <p></p>
-<!-- 程式執行 ouput 區 -->
+<p><!-- 程式執行 ouput 區 --></p>
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console"></textarea></div>
-<!-- Brython 程式執行的結果, 都以 brython_div 作為切入位置 -->
-<div id="brython_div"></div><br />About << <a href='About.html'>Previous</a> <a href='GitExtensions.html'>Next</a> >> GitExtensions</div>
+<p><!-- Brython 程式執行的結果, 都以 brython_div 作為切入位置 --></p>
+<div id="brython_div"></div>
+<div>我覺得第一題的程式並沒有很難，難的是要怎們利用簡單的語法來完成它。第二題的話我有努力去寫，但是還是沒辦法獨自完成，所以有問了一些同學請他們教我，我才能完成這個程式。</div>
+<p><!-- 導入 gearUtils-0.9.js Cango 齒輪繪圖程式庫 -->
+<script src="https://mde.tw/cp2021/cmsimde/static/Cango-24v03-min.js"></script>
+<script src="https://mde.tw/cp2021/cmsimde/static/gearUtils-09.js"></script>
+<script src="https://mde.tw/cp2021/cmsimde/static/SVGpathUtils-6v03-min.js"></script>
+<script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
+<script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
+</p><br />About << <a href='About.html'>Previous</a> <a href='GitExtensions.html'>Next</a> >> GitExtensions</div>
         
     <!-- footer -->
       <div class="container">
